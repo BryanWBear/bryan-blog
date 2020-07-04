@@ -14,7 +14,7 @@ export default function Template({
     <div className="blog-post-container">
       <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
       <div className="blog-post">
-        <h1>{post.frontmatter.title}</h1>
+        <h1 style={{marginBottom: "5rem", textAlign: "center"}}>{post.frontmatter.title}</h1>
         <div
           className="blog-post-content"
           style={{fontFamily: "Computer Modern Serif", marginLeft: '15rem', marginRight: '15rem'}}

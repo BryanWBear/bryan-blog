@@ -37,7 +37,7 @@ def kde_heatmap(latlong_points, long_min, long_max, lat_min, lat_max, grid_granu
 
 Here's what the output looks like on a dataset of Airbnb listings in North America, once you've removed the 10000 cities with most listings. I did this to see where less popular destinations are located.
 
-(( Image here ))
+![Heat map of Airbnb listings in the US](./map.png)
 
 Essentially KDE is a "less contrived" version of a histogram. If there are $N$ data points and we have no prior knowledge, then our best bet is to assign each point a probability mass of $1/N$. This is what the ECDF does. However, KDE says that we shouldn't just concentrate all that mass at one point. Instead, that mass should be spread out around each point by using a "kernel function", which can range from a rectangle to a normal distribution-looking thing. 
 
