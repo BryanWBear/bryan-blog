@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: "/bryan-blog",
   // previous setup
   plugins: [
     "gatsby-plugin-catch-links",
