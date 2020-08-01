@@ -1,6 +1,6 @@
 ---
 path: "/snippet-1"
-date: 2017-07-12T17:12:33.962Z
+date: 2020-07-01T17:12:33.962Z
 title: "Snippet 1 - KDE Heatmap"
 ---
 
