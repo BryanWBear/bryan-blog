@@ -75,5 +75,7 @@ class Melcepstrum {
 
 This class calculates Mel filterbanks, a preprocessing step in keyword spotting. As far as I know, there seem to be very few implementations of this in Swift. A helpful resource that explains it better than I could: https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html#fn:1. I have observed in practice that the filterbanks are enough as features, and the DCT is a somewhat redundant linear transform.
 
+The conversion between Swift and Python: `Melcepstrum().mel(sr, n_fft, n_mels, slaney=True)` is equivalent to `librosa.filters.mel(sr, n_fft, n_mels, fmin=0.0, fmax=None, htk=True, norm='slaney', dtype=np.float32)`.
+
 To further optimize this, we could do away the 2d matrix, since each filter is a triangle filter which is supported only on a few frequencies. However, I have observed that this calculation already runs with almost no overhead. The main bottleneck is the keyword spotting CNN itself. For more information on how this class is integrated into a project, check out my project here: https://github.com/BryanWBear/GifControl.
 
