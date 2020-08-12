@@ -1,12 +1,15 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import "./index.css"
+import Sidebar from "../components/Sidebar/index.js"
 // import '../css/index.css'; // add some style if you want!
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark
   return (
-    <div className="blog-posts">
+    <div className="container" style={{display: 'flex'}}>
+      <Sidebar/>
+      <div className="blog-posts" style={{width: '70%'}}>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => {
@@ -20,9 +23,12 @@ export default function Index({ data }) {
             </div>
           )
         })}
+      </div>
     </div>
   )
 }
+
+
 
 export const pageQuery = graphql`
   query IndexQuery {
