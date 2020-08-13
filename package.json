@@ -30,7 +30,7 @@
     "gatsby-remark-mathjax": "^1.0.0",
     "gatsby-remark-prismjs": "^3.5.9",
     "gatsby-source-filesystem": "^2.3.18",
-    "gatsby-transformer-remark": "^2.8.23",
+    "gatsby-transformer-remark": "^2.8.28",
     "katex": "^0.11.1",
     "node-sass": "^4.14.1",
     "prismjs": "^1.20.0",
