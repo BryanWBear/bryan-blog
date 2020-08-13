@@ -38,3 +38,10 @@
 	font-weight: bold;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('../../../static/cmunbi.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
