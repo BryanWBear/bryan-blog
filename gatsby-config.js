@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  pathPrefix: "/bryan-blog",
+  // pathPrefix: "/bryan-blog",
   // previous setup
   plugins: [
     "gatsby-plugin-catch-links",
@@ -43,7 +43,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 300,
+              maxWidth: 1000,
             },
           },      
         ],      
