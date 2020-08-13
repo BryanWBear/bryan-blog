@@ -45,7 +45,7 @@ plt.savefig('followup.png')
 
 The result looks like this:
 
-![Barplot](followup.png)
+![Barplot](followup.jpg)
 
 The data that I'm using isn't so important. I think the three things to take from this are:
 
