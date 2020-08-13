@@ -20,7 +20,7 @@ const Icon = ({ href, icon, onMouseEnter, onMouseLeave }) => (
 );
 
 const Sidebar = () => {
-  const [text, setText] = useState("boop");
+  const [text, setText] = useState("");
 
   return (
   <header style={{width: '30%', display: 'flex', justifyContent: 'center'}}>
