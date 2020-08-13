@@ -33,6 +33,7 @@ const Sidebar = () => {
           <FlipPortrait></FlipPortrait>
         </div>
         <div style={{display: 'flex', justifyContent: 'center'}}>
+        {/* (王博远) */}
           <h2 style={{fontFamily: "Computer Modern Serif"}}>Bryan Wang</h2>
         </div>
         <div style={{display: 'flex', justifyContent: 'center'}}>

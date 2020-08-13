@@ -29,7 +29,7 @@ def create_map_scatter(df, values, zoom=11):
 
 This map allows me to look at Airbnb rentals over a specified time frame. It looks something like this:
 
-![Airbnb Rentals in SF](airbnb.jpeg)
+![Airbnb Rentals in SF](airbnb.png)
 
 The `animation_frame` and `animation_group` properties are doing the heavy lifting here. It would take about 50 to 100 lines of code to add a slider and buttons otherwise. In order to make everything work, you need to melt your dataframe columns. If you want your slider to iterate through columns, then the melted columns become your `animation_frame`.
 
