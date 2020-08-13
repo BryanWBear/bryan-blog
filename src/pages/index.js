@@ -2,12 +2,15 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import "./index.css"
 import Sidebar from "../components/Sidebar/index.js"
+
+
 // import '../css/index.css'; // add some style if you want!
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <div className="container" style={{display: 'flex'}}>
+      {/* <img src={slime} alt="Logo" /> */}
       <Sidebar/>
       <div className="blog-posts" style={{width: '70%'}}>
       {posts
