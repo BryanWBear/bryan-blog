@@ -96,7 +96,19 @@ To sum it up, if $\rho_1 = \rho_2, i = l, j =k$, then $$Q = \frac{1}{|G|} \sum e
 
 The Fourier transform is defined as $$\hat{\varphi}(\rho) = \sum_g \rho(g)\varphi(g)$$
 
-If $\rho$ is unitary irreducible and $\varphi$ is a matrix entry (as defined above), we see that $\hat{\varphi}$ is a matrix with a non-zero constant in the position of the corresponding matrix entry (if $\varphi$ is a matrix entry of $\rho$), and 0 in all other positions. This is purely based on the argument from above. 
+Note that $\hat{\varphi}(\rho)_{ij} = \frac{1}{dim(\rho)} \langle \varphi, \rho(g)_{ij} \rangle$, which is the amount of matrix entry $ij$ present in $\varphi$, assuming that $\rho$ is in unitary form. Thus the Fourier transform encodes $\varphi$ in terms of the basis that we just derived.
+
+Indeed, if we assumed a unitary format for all irreducible $\rho$, we would have that $$\varphi(g) = \sum_{\rho, i, j}   \frac{1}{dim(\rho)} \langle \varphi, \rho(g)^*_{ij} \rangle \rho(g)^*_{ij}$$
+
+This is just writing the function in terms of the orthonormal basis we found. Let's dig deeper into this expression.
+
+We then have that $$\varphi(g) = \sum_{\rho, i, j}   dim(\rho) \hat{\varphi}(\rho) \rho(g)^*_{ij} = \sum_{\rho, j}   dim(\rho) \hat{\varphi}(\rho)_j \cdot \rho(g)^*_{j} = \sum_{\rho, j}   dim(\rho) \hat{\varphi}(\rho)_j \cdot \rho(g^{-1})^T_{j}$$
+
+Now note that $$\sum_j \hat{\varphi}(\rho)_j \cdot \rho(g^{-1})^T_{j} = tr(\rho(g^{-1}) \hat\varphi(\rho))$$
+
+Putting it all together, we get the (unscaled) Fourier inversion formula: $$\varphi(g) = \sum_{\rho} dim(\rho) tr(\rho(g^{-1}) \hat\varphi(\rho))$$ This isn't the derivation that you would usually find, as it's much simpler to derive the inversion formula from the decomposition of the regular representation into irreducibles, which yields the two equations $|G| = \sum_{\rho} dim(\rho)$ and $0 = \sum_{\rho} dim(\rho)\chi_{\rho}(g)$.
+
+However, I think that this derivation is more motivational than the easy one. This form of the Fourier inversion formula is more useful than the straightforward thing we started out with because it is basis-invariant.
 
 # Algorithmic Level
 
