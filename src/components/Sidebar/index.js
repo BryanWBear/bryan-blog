@@ -50,7 +50,7 @@ const Sidebar = () => {
             <Icon 
                 href={`https://cod.tracker.gg/modern-warfare/profile/battlenet/Syllabear%231400/mp`} 
                 icon={faBattleNet} 
-                onMouseEnter={() => setText("\"You can't talk, you're negative\" - Anonymous, CoD: Modern Warfare")}
+                onMouseEnter={() => setText("\"You can't talk, you're negative.\" - Anonymous, CoD: Modern Warfare")}
             />
         </div>
         <div style={{display: 'flex', justifyContent: 'center', marginTop: '20%', marginLeft: '10%', marginRight: '10%', fontFamily: "Computer Modern Serif", fontStyle: "italic"}}>{text}</div>
