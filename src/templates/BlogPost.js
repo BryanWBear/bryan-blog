@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import "katex/dist/katex.min.css"
 import "../pages/index.css"
 import Img from "gatsby-image"
+import { DiscussionEmbed } from "disqus-react"
+
 
 // import '../css/blog-post.css'; // make it pretty!
 
@@ -12,6 +14,13 @@ export default function Template({
 }) {
   const { markdownRemark: post } = data // data.markdownRemark holds your post data
   // let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+
+
+  // TODO: need to move this value to .env file
+  const disqusConfig = {
+    shortname: 'bryanwbear',
+    config: { identifier: post.frontmatter.title },
+  }
 
   return (
     <div className="blog-post-container">
@@ -24,6 +33,7 @@ export default function Template({
           style={{fontFamily: "Computer Modern Serif", marginLeft: '15rem', marginRight: '15rem'}}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
+        <DiscussionEmbed {...disqusConfig} />
       </div>
     </div>
   )
